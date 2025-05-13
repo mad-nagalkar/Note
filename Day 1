@@ -1,0 +1,196 @@
+STRING
+
+represents a sequence of characters
+It is just a word or a collection of characters
+Strings are immutable
+Immutability: Strings in Python are immutable, meaning that concatenation always creates a new string object.
+ 
+They are defined by enclosing characters within single quotes ('...'), double quotes ("..."), or triple quotes ("""...""" or '''...''') for multi-line strings.
+		string1 = 'Hello'
+		string2 = "World"
+		string3 = """This is a
+		multi-line string"""
+		
+contain letters, numbers, symbols, and spaces
+Individual characters within a string can be accessed using indexing
+
+Strings support various operations such as concatenation, slicing, and formatting.
+They also have built-in methods for tasks like converting case, searching, and replacing substrings.
+
+concatenation
+process of joining two or more strings into a single, new string.
+1)Using the + operator
+most straightforward way
+		string1 = "Hello"
+		string2 = "World"
+		result = string1 + " " + string2
+		print(result)  # Output: Hello World
+
+ensure that all operands are strings.
+If you need to concatenate a string with a number or other data type, convert it to a string first using str().
+		number = 123
+		string = "The number is: " + str(number)
+		print(string) # Output: The number is: 123
+
+2)Using the join() method
+particularly efficient for concatenating multiple strings
+		string_list = ["Hello", " ", "World", "!"]
+		result = "".join(string_list)
+		print(result)  # Output: Hello World!
+
+
+3)Using f-strings (formatted string literals)
+Way to add expressions inside string literals
+		string1 = "Hello"
+		string2 = "World"
+		result = f"{string1} {string2}!"
+		print(result)  # Output: Hello World!
+
+4)Using the % operator (older method)
+less modern compared to f-strings and format()
+		string1 = "Hello"
+		string2 = "World"
+		result = "%s %s!" % (string1, string2)
+		print(result) # Output: Hello World!
+		
+5)Using the format() method
+more control over string formatting and can also be used for concatenation
+		 string1 = "Hello"
+		 string2 = "World"
+		 result = "{} {}!".format(string1, string2)
+		 print(result) # Output: Hello World!
+		 
+Build-in methods for string 
+https://www.w3schools.com/python/python_ref_string.asp
+-----------------------------------------------------------------------------------
+Operators 
+special symbols in Python that perform operations on values and variables, known as operands
+
+1)Arithmetic Operators(mathematical calculations)
+2)Assignment Operators(Assign values to variables)
+3)Comparison Operators(Compare two values)
+4)Logical Operators(Combine or modify boolean expressions)
+5)Identity Operators(Check if two variables refer to the same object in memory)
+6)Membership Operators(Test if a value is present in a sequence)
+7)Bitwise Operators(Perform operations on individual bits of data)
+
+
+Arithmetic Operator
++ (addition)
+- (subtraction)
+* (multiplication)
+/ (division)
+% (modulus - remainder of division)
+// (floor division - quotient without decimal part)
+** (exponentiation
+
+Assignment Operators
+= (assign)
++= (add and assign)
+-= (subtract and assign)
+*= (multiply and assign)
+/= (divide and assign)
+%= (modulus and assign)
+//= (floor divide and assign)
+**= (exponentiate and assign)
+&= (bitwise AND and assign)
+|= (bitwise OR and assign)
+^= (bitwise XOR and assign)
+>>= (bitwise right shift and assign)
+<<= (bitwise left shift and assign)
+
+Comparison Operators
+== (equal to)
+!= (not equal to)
+> (greater than)
+< (less than)
+>= (greater than or equal to)
+<= (less than or equal to)
+
+Logical Operators
+is (identical)
+is not (not identical)
+and (logical AND)
+or (logical OR)
+not (logical NOT)
+
+Identity Operators
+is (identical)
+is not (not identical)
+
+Membership Operators
+in (present)
+not in (not present)
+
+Bitwise Operators
+& (bitwise AND)
+| (bitwise OR)
+^ (bitwise XOR)
+~ (bitwise NOT)
+<< (left shift)
+>> (right shift)
+----------------------------------------------------------------------------------
+function 
+block of organized, reusable code that performs a specific task.
+help to break down larger programs into smaller, more manageable pieces, making code easier to read, write, and debug.
+Set of code which only runs when it is called
+
+defining a function
+Functions are defined using the def keyword, followed by the function name, parentheses (), and a colon :
+The code block within the function is indented.
+		def function_name(parameters):
+			"""Docstring explaining the function's purpose"""
+			# Function body
+			return value
+
+
+
+
+-----------------------------------------------------------------------------------
+Indexing
+accessing elements in a sequence (like strings, lists, or tuples) using their position
+Indexing starts at 0, meaning the first element has index 0, the second has index 1, and so on.
+Negative indices are also supported, where -1 refers to the last element, -2 to the second last, and so on. 
+
+
+Basic Indexing
+To access an element, use square brackets [] with the index inside,
+		my_list = [10, 20, 30, 40, 50]
+		print(my_list[0])  # Output: 10
+		print(my_list[3])  # Output: 40
+		print(my_list[-1]) # Output: 50
+
+Slicing
+Slicing extracts a portion of a sequence(strings, lists, and tuples) using a start and end index.
+	syntax [start:end:step]
+	start specifies the starting index (default is 0).
+	end specifies the ending index (exclusive).
+	step specifies the increment between indices (default is 1).
+	
+		my_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+		print(my_list[2:5])    # Output: [2, 3, 4]
+		print(my_list[:4])    # Output: [0, 1, 2, 3]
+		print(my_list[6:])    # Output: [6, 7, 8, 9]
+		print(my_list[1:7:2])  # Output: [1, 3, 5]
+		print(my_list[::2])   # Output: [0, 2, 4, 6, 8]
+		print(my_list[::-1])  # Output: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0] - Reverses the list
+
+If start is omitted, it defaults to 0. If end is omitted, it defaults to the length of the sequence.
+The syntax is [start:end], where start is inclusive and end is exclusive.
+		my_string = "Hello, World!"
+		print(my_string[0:5])  # Output: Hello
+		print(my_string[7:])  # Output: World!
+		print(my_string[:5])  # Output: Hello
+		print(my_string[:])   # Output: Hello, World!
+
+
+Strides--need to learn more on it
+https://stackoverflow.com/questions/7770689/python-string-slicing-stride-clarification
+https://www.digitalocean.com/community/tutorials/how-to-index-and-slice-strings-in-python-3
+
+Index method
+The index() method finds the index of the first occurrence of a value in a sequence.
+		my_list = ['apple', 'banana', 'cherry']
+		index_of_banana = my_list.index('banana')
+		print(index_of_banana)  # Output: 1
