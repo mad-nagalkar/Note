@@ -1,0 +1,67 @@
+Operators 
+special symbols in Python that perform operations on values and variables, known as operands
+
+1)Arithmetic Operators(mathematical calculations)
+2)Assignment Operators(Assign values to variables)
+3)Comparison Operators(Compare two values)
+4)Logical Operators(Combine or modify boolean expressions)
+5)Identity Operators(Check if two variables refer to the same object in memory)
+6)Membership Operators(Test if a value is present in a sequence)
+7)Bitwise Operators(Perform operations on individual bits of data)
+
+
+Arithmetic Operator
++ (addition)
+- (subtraction)
+* (multiplication)
+/ (division)
+% (modulus - remainder of division)
+// (floor division - quotient without decimal part)
+** (exponentiation
+
+Assignment Operators
+= (assign)
++= (add and assign)
+-= (subtract and assign)
+*= (multiply and assign)
+/= (divide and assign)
+%= (modulus and assign)
+//= (floor divide and assign)
+**= (exponentiate and assign)
+&= (bitwise AND and assign)
+|= (bitwise OR and assign)
+^= (bitwise XOR and assign)
+>>= (bitwise right shift and assign)
+<<= (bitwise left shift and assign)
+
+Comparison Operators
+== (equal to)
+!= (not equal to)
+> (greater than)
+< (less than)
+>= (greater than or equal to)
+<= (less than or equal to)
+
+Logical Operators
+is (identical)
+is not (not identical)
+and (logical AND)
+or (logical OR)
+not (logical NOT)
+
+Identity Operators
+is (identical)
+is not (not identical)
+
+Membership Operators
+in (present)
+not in (not present)
+
+Bitwise Operators
+& (bitwise AND)
+| (bitwise OR)
+^ (bitwise XOR)
+~ (bitwise NOT)
+<< (left shift)
+>> (right shift)
+----------------------------------------------------------------------------------
