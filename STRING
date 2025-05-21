@@ -1,0 +1,65 @@
+STRING
+
+represents a sequence of characters
+It is just a word or a collection of characters
+Strings are immutable
+Immutability: Strings in Python are immutable, meaning that concatenation always creates a new string object.
+ 
+They are defined by enclosing characters within single quotes ('...'), double quotes ("..."), or triple quotes ("""...""" or '''...''') for multi-line strings.
+		string1 = 'Hello'
+		string2 = "World"
+		string3 = """This is a
+		multi-line string"""
+		
+contain letters, numbers, symbols, and spaces
+Individual characters within a string can be accessed using indexing
+
+Strings support various operations such as concatenation, slicing, and formatting.
+They also have built-in methods for tasks like converting case, searching, and replacing substrings.
+
+concatenation
+process of joining two or more strings into a single, new string.
+1)Using the + operator
+most straightforward way
+		string1 = "Hello"
+		string2 = "World"
+		result = string1 + " " + string2
+		print(result)  # Output: Hello World
+
+ensure that all operands are strings.
+If you need to concatenate a string with a number or other data type, convert it to a string first using str().
+		number = 123
+		string = "The number is: " + str(number)
+		print(string) # Output: The number is: 123
+
+2)Using the join() method
+particularly efficient for concatenating multiple strings
+		string_list = ["Hello", " ", "World", "!"]
+		result = "".join(string_list)
+		print(result)  # Output: Hello World!
+
+
+3)Using f-strings (formatted string literals)
+Way to add expressions inside string literals
+		string1 = "Hello"
+		string2 = "World"
+		result = f"{string1} {string2}!"
+		print(result)  # Output: Hello World!
+
+4)Using the % operator (older method)
+less modern compared to f-strings and format()
+		string1 = "Hello"
+		string2 = "World"
+		result = "%s %s!" % (string1, string2)
+		print(result) # Output: Hello World!
+		
+5)Using the format() method
+more control over string formatting and can also be used for concatenation
+		 string1 = "Hello"
+		 string2 = "World"
+		 result = "{} {}!".format(string1, string2)
+		 print(result) # Output: Hello World!
+		 
+Build-in methods for string 
+https://www.w3schools.com/python/python_ref_string.asp
+-----------------------------------------------------------------------------------
