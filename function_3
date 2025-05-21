@@ -1,0 +1,116 @@
+function 
+block of organized, reusable code that performs a specific task.
+help to break down larger programs into smaller, more manageable pieces, making code easier to read, write, and debug.
+Set of code which only runs when it is called
+
+defining a function(user defined function)
+Functions are defined using the def keyword, followed by the function name, parentheses (), and a colon :
+The code block within the function is indented.
+
+    def greet(name):
+      """This function greets the person passed in as a parameter."""
+      print(f"Hello, {name}!")
+
+Calling a Function
+To execute a function, you call it by its name followed by parentheses.
+    greet("Alice")  # Output: Hello, Alice!
+ 
+ 
+Arguments and Parameters
+Functions can take input values, called arguments, which are specified within the parentheses when calling the function. Inside the function, these values are referred to as parameters
+
+return
+https://realpython.com/python-return-statement/
+
+    def function_name(parameters):
+      """Docstring explaining the function's purpose"""
+      # Function body
+      return value
+Example:      
+    def add(x, y):
+      """This function returns the sum of x and y."""
+      return x + y
+    result = add(5, 3)
+    print(result)  # Output: 8
+
+Scope (globle VS local variable)
+Variables defined inside a function have local scope, meaning they are only accessible within the function.
+Variables defined outside any function have global scope and can be accessed from anywhere in the code.
+global_var = 10
+    def my_function():
+      local_var = 5
+      print(local_var)
+      print(global_var)
+    my_function()
+    #print(local_var) # this would cause an error
+    print(global_var)
+
+Default Arguments
+Function parameters can have default values, which are used if no argument is provided when calling the function.
+    def power(base, exponent=2):
+      return base**exponent
+    print(power(3))  # Output: 9
+    print(power(3, 3))  # Output: 27
+
+Types of Functions
+1)built-in functions
+2)Lambda Functions(Anonymous Functions)
+3)Recursive Functions
+4)Higher-Order Functions
+5)Generator Functions
+6)User-defined Functions
+1)built-in functions
+Python has built-in functions like print(), len(), max(), as well as user-defined functions.
+    numbers = [1, 2, 3, 4, 5]
+    print(len(numbers))  # Output: 5
+2)Lambda Functions (Anonymous Functions)
+Python also supports anonymous functions defined using the lambda keyword. These are often used for short, simple operations.
+    square = lambda x: x**2
+    print(square(4))  # Output: 16  
+3)Recursive Functions
+These are functions that call themselves within their own definition. 
+They are useful for solving problems that can be broken down into smaller, self-similar subproblems.      
+    def factorial(n):
+      if n == 0:
+        return 1
+      else:
+        return n * factorial(n-1)
+4)Higher-Order Functions: 
+These are functions that can take other functions as arguments or return functions as results. 
+Examples include map(), filter(), and reduce().
+    def apply_operation(func, x, y):
+      return func(x, y)
+    def multiply(x, y):
+      return x * y
+ 
+    result = apply_operation(multiply, 5, 3)
+5)Generator Functions
+These functions use the yield keyword to return a sequence of values one at a time, instead of generating them all at once.
+They are memory-efficient for working with large datasets.
+    def count_up_to(max):
+      count = 1
+      while count <= max:
+        yield count
+        count += 1
+    for number in count_up_to(5):
+      print(number)
+ 
+6)User-defined Functions
+input()
+    name = input("Please enter your name: ")
+    print("Hello, " + name + "!")
+    age_str = input("Please enter your age: ")
+    age = int(age_str) # Convert the input to an integer
+    print("You are", age, "years old.")
+calculations 
+If the intention is to obtain numerical input for calculations,
+It is necessary to convert the string returned by input() to the appropriate data type (e.g., int or float) using type conversion functions.
+try-except
+handle potential errors that may occur if the user enters invalid input, using try-except blocks.
+    try:
+      number_str = input("Enter a number: ")
+      number = float(number_str)
+      print("You entered:", number)
+    except ValueError:
+      print("Invalid input. Please enter a valid number.")
+-----------------------------------------------------------------------------------
