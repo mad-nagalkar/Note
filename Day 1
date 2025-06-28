@@ -194,3 +194,71 @@ The index() method finds the index of the first occurrence of a value in a seque
 		my_list = ['apple', 'banana', 'cherry']
 		index_of_banana = my_list.index('banana')
 		print(index_of_banana)  # Output: 1
+
+-------------------------------------------------------------
+
+Key word
+
+Expressions and Statements 
+Expressions-any sort of code that returns value
+Statements-operation on value
+
+program- serice of statements
+
+comments
+any things after #
+
+-----------------------------------
+checking data type
+
+    name = "anna"
+    print(type(name) == str)
+    
+    true
+    --------
+
+    name = "anna"
+    print(isinstance(name, str))
+  
+    true
+    -------------
+
+    age = 29
+    print(isinstance(age, int))
+
+    true
+    ------------
+
+    age = 29
+    print(isinstance(age, float))
+
+    false
+    -------------
+
+Class Constructer or type convergen
+
+    age = float(3.14)
+    print(isinstance(age, float))
+
+    true
+    -----------------
+    age = "3.14"
+    print(isinstance(age, int))
+
+    false
+    ----------------
+    age = int("3.14")
+    print(isinstance(age, int))
+
+    true
+    -----------------
+
+Casting
+
+    pi = "3.14"
+    age = int(pi)
+    print(isinstance(age, int))
+
+    true
+    ------------------
+---------------------------------------------------------------------
