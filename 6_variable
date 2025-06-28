@@ -1,0 +1,23 @@
+variable
+can be characters, numberws and undersore
+but can not start with number
+
+name = 3.14
+NAME = 3.14
+name1 = 3.14
+_name1 = 3.14
+name_1 = 3.14
+
+NOT POSSIBLE
+123
+name!
+name%
+any python key words similar to
+for, if, while, import
+
+Below both will give same output. use ";" to write in single line
+  name = 3.14
+  print(name)
+
+  name = 3.14; print(name)
+  
