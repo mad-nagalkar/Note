@@ -134,6 +134,8 @@ Bitwise Operators
 << (left shift)
 >> (right shift)
 
+Arithmetic Operator
+100 days notes
 
 Assignment Operators
 		age = 18
@@ -155,28 +157,71 @@ a > b  #False
 a <= b #True
 
 Logical Operators/Boolean operators
-These operators are essential for controlling program flow, especially in conditional statements like if, while, and for. They make your code more expressive and logical!
+Python provides three logical operators: and, or, and not. 
+These operators are used to combine or modify Boolean expressions (expressions that evaluate to True or False) and return a Boolean result.
 
-and (logical AND) Returns True if both conditions are True.
-x = 5
-y = 10
+and operator:
+The and operator returns True if both operands are True.
+If either operand is False, the and operator returns False.
+It exhibits "short-circuiting" behavior: if the first operand is False, the second operand is not evaluated.
 
-print(x > 3 and y < 15)  # True (both conditions are true)
-print(x > 6 and y < 15)  # False (first condition is false)
+    print(True and True)   # Output: True
+    print(True and False)  # Output: False
+    print(False and True)  # Output: False
+    print(False and False) # Output: False
 
-or (logical OR) Returns True if at least one condition is True.
-x = 5
-y = 10
+	x = 5
+	y = 10
+	
+	# Example: Both conditions are True
+	if x > 0 and y > 0:
+	    print("Both x and y are positive.") # This will be printed
+	
+	# Example: One condition is False
+	if x > 0 and y < 5:
+	    print("This will not be printed.")
 
-print(x > 3 or y > 15)  # True (first condition is true)
-print(x > 6 or y > 15)  # False (both conditions are false)
+or operator:
+The or operator returns True if at least one of the operands is True.
+It returns False only if both operands are False.
+It also exhibits "short-circuiting" behavior: if the first operand is True, the second operand is not evaluated.
 
-not (logical NOT) Reverses the Boolean value of a condition.
-x = 5
-print(not x > 3)  # False (x > 3 is True, so `not` makes it False)
-print(not x > 6)  # True (x > 6 is False, so `not` makes it True)
+    print(True or True)    # Output: True
+    print(True or False)   # Output: True
+    print(False or True)   # Output: True
+    print(False or False)  # Output: False
 
+	age = 17
+	has_permission = True
+	
+	# Example: One condition is True
+	if age >= 18 or has_permission:
+	    print("Eligible to proceed.") # This will be printed
+	
+	# Example: Both conditions are False
+	if age < 10 or has_permission == False:
+	    print("This will not be printed.")
 
+not operator:
+The not operator is a unary operator, meaning it operates on a single operand.
+It inverts the Boolean value of its operand: not True evaluates to False, and not False evaluates to True.
+    
+    print(not True)   # Output: False
+    print(not False)  # Output: True
+
+	is_raining = False
+	
+	# Example: Reversing a False condition
+	if not is_raining:
+	    print("It's not raining, go outside!") # This will be printed
+	
+	# Example: Reversing a True condition
+	is_sunny = True
+	if not is_sunny:
+	    print("This will not be printed.")
+These logical operators are fundamental for constructing complex conditional statements and controlling program flow in Python. They are often used within if, elif, and while statements.
+
+Identity Operators
 def is_adult(age):
 	if age > 18:
 		return True
@@ -186,6 +231,46 @@ def is_adult(age):
 def is_adult2(age)
 	return True if age > 18 else False
 
+Python identity operators are used to check if two variables refer to the exact same object in memory, rather than just having equal values. 
+This distinction is crucial when working with mutable objects or when needing to confirm that two references point to the identical instance. 
+
+There are two identity operators in Python: 
+is: This operator returns True if both variables point to the same object in memory. Otherwise, it returns False.
+	    a = [1, 2, 3]
+	    b = a  # b now refers to the same list object as a
+	    c = [1, 2, 3] # c is a new list object, even if its content is the same
+	
+	    print(a is b)  # Output: True (a and b are the same object)
+	    print(a is c)  # Output: False (a and c are different objects)	
+
+is not: This operator returns True if both variables do not point to the same object in memory. Otherwise, it returns False. 
+	    x = "hello"
+	    y = "world"
+	    z = "hello"
+	
+	    print(x is not y)  # Output: True (x and y are different objects)
+	    print(x is not z)  # Output: False (x and z might be the same object due to string interning for small strings)
+
+Key Difference from Equality Operators (==):
+While is checks for object identity (same memory location), the equality operator == checks for value equality. Two objects can have the same value but be distinct objects in memory.
+
+	list1 = [1, 2, 3]
+	list2 = [1, 2, 3]
+	
+	print(list1 == list2) # Output: True (values are equal)
+	print(list1 is list2) # Output: False (different objects in memory)
+
+Common Use Cases:
+Checking for None: The is operator is the recommended way to check if a variable is None, as None is a singleton object in Python
+
+	    my_variable = None
+	    if my_variable is None:
+	        print("Variable is None")
+
+Comparing Custom Objects:
+When working with instances of custom classes, is can determine if two variables refer to the exact same instance.
+Performance Optimization (with caution):
+In some specific cases, using is for immutable objects like small integers or strings that are "interned" by Python can be slightly faster than ==, but relying on interning behavior across different Python versions or implementations is generally not recommended for robust code.
 ----------------------------------------------------------------------------------
 function 
 block of organized, reusable code that performs a specific task.
