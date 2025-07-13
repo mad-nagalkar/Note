@@ -66,8 +66,10 @@ more control over string formatting and can also be used for concatenation
 		name += " is my name"
 		print(name) # Output: anna is my name
 
-Build-in methods for string 
+Build-in methods for string OR string methods
 https://www.w3schools.com/python/python_ref_string.asp
+
+
 -----------------------------------------------------------------------------------
 Operators 
 special symbols in Python that perform operations on values and variables, known as operands
@@ -76,7 +78,7 @@ special symbols in Python that perform operations on values and variables, known
 2)Assignment Operators(Assign values to variables)
 3)Comparison Operators(Compare two values)
 4)Logical Operators(Combine or modify boolean expressions)
-5)Identity Operators(Check if two variables refer to the same object in memory)
+5)Identity Operators or Ternary operater(Check if two variables refer to the same object in memory)
 6)Membership Operators(Test if a value is present in a sequence)
 7)Bitwise Operators(Perform operations on individual bits of data)
 
@@ -221,7 +223,7 @@ It inverts the Boolean value of its operand: not True evaluates to False, and no
 	    print("This will not be printed.")
 These logical operators are fundamental for constructing complex conditional statements and controlling program flow in Python. They are often used within if, elif, and while statements.
 
-Identity Operators
+Identity Operators or Ternary
 def is_adult(age):
 	if age > 18:
 		return True
@@ -233,6 +235,7 @@ def is_adult2(age)
 
 Python identity operators are used to check if two variables refer to the exact same object in memory, rather than just having equal values. 
 This distinction is crucial when working with mutable objects or when needing to confirm that two references point to the identical instance. 
+Basically it is IF ELSE statment in single line.
 
 There are two identity operators in Python: 
 is: This operator returns True if both variables point to the same object in memory. Otherwise, it returns False.
@@ -284,6 +287,9 @@ The code block within the function is indented.
 			"""Docstring explaining the function's purpose"""
 			# Function body
 			return value
+
+Built in functions
+https://www.w3schools.com/python/python_ref_functions.asp
 
 
 
